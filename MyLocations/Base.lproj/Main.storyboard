@@ -385,6 +385,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="4bg-95-qnO" id="zpl-lu-f8J"/>
+                        <segue destination="ZgO-NQ-Zqp" kind="show" identifier="EditLocation" id="FVB-tS-VRh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJJ-Jy-uZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -509,6 +510,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uOI-E9-6gz"/>
+        <segue reference="FVB-tS-VRh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -40,6 +40,7 @@ class MapViewController: UIViewController {
   }
   
   // MARK:- Private methods
+  
   func updateLocations() {
     mapView.removeAnnotations(locations)
     let entity = Location.entity()
@@ -86,7 +87,19 @@ class MapViewController: UIViewController {
   }
   
   @objc func showLocationDetails(_ sender: UIButton) {
-    
+    performSegue(withIdentifier: "EditLocation", sender: sender)
+  }
+  
+  // MARK: - Navigation
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "EditLocation" {
+      let controller = segue.destination as! LocationDetailsViewController
+      controller.managedObjectContext = managedObjectContext
+      let button = sender as! UIButton
+      let location = locations[button.tag]
+      controller.locationToEdit = location
+    }
   }
 }
 
@@ -106,12 +119,12 @@ extension MapViewController: MKMapViewDelegate {
       pinView.animatesDrop = false
       pinView.pinTintColor = UIColor(red: 0.32, green: 0.82, blue: 0.4, alpha: 1)
       let rightButton = UIButton(type: .detailDisclosure)
-      rightButton.addTarget(self, action: #selector(showLocations), for: .touchUpInside)
+      rightButton.addTarget(self, action: #selector(showLocationDetails), for: .touchUpInside)
       pinView.rightCalloutAccessoryView = rightButton
       annotationView = pinView
     }
     
-    if let annotationView = annotationView{
+    if let annotationView = annotationView {
       annotationView.annotation = annotation
       let button = annotationView.rightCalloutAccessoryView as! UIButton
       if let index = locations.index(of: annotation as! Location) {
