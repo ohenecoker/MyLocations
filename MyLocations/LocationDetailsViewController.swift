@@ -47,6 +47,10 @@ class LocationDetailsViewController: UITableViewController {
   @IBOutlet weak var longitudeLabel: UILabel!
   @IBOutlet weak var addressLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
+  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var addPhotoLabel: UILabel!
+  
+  var image: UIImage?
   
   var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
   var placemark: CLPlacemark?
@@ -95,6 +99,8 @@ class LocationDetailsViewController: UITableViewController {
   }
   
   // MARK:- Navigation
+  
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "PickCategory" {
       let controller = segue.destination as! CategoryPickerViewController
@@ -103,6 +109,7 @@ class LocationDetailsViewController: UITableViewController {
   }
   
   // MARK:- Actions
+  
   @IBAction func done() {
     let hudView = HudView.hud(inView: navigationController!.view, animated: true)
     let location: Location
@@ -141,6 +148,7 @@ class LocationDetailsViewController: UITableViewController {
   }
   
   // MARK:- Prviate Methods
+  
   func string(from placemark: CLPlacemark) -> String {
     var text = ""
     
@@ -183,6 +191,12 @@ class LocationDetailsViewController: UITableViewController {
     if indexPath.section == 0 && indexPath.row == 0 {
       return 88
       
+    } else if indexPath.section == 1 {
+      if imageView.isHidden {
+        return 44
+      } else {
+        return 280
+      }
     } else if indexPath.section == 2 && indexPath.row == 2 {
       addressLabel.frame.size = CGSize(width: view.bounds.size.width - 120, height: 10000)
       addressLabel.sizeToFit()
@@ -209,6 +223,13 @@ class LocationDetailsViewController: UITableViewController {
       pickPhoto()
     }
   }
+  
+  func show(image: UIImage) {
+    imageView.image = image
+    imageView.isHidden = false
+    imageView.frame = CGRect(x: 10, y: 10, width: 260, height: 260)
+    addPhotoLabel.isHidden = true
+  }
 }
 
 extension LocationDetailsViewController:
@@ -227,6 +248,11 @@ extension LocationDetailsViewController:
   
   func imagePickerController(_ picker: UIImagePickerController,
                              didFinishPickingMediaWithInfo info: [String : Any]) {
+    image = info[UIImagePickerControllerEditedImage] as? UIImage
+    if let theImage = image {
+      show(image: theImage)
+    }
+    tableView.reloadData()
     dismiss(animated: true, completion: nil)
   }
   
