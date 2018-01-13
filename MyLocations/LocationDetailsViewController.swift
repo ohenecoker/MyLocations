@@ -282,10 +282,11 @@ extension LocationDetailsViewController:
 UINavigationControllerDelegate {
   
   func takePhotoWithCamera() {
-    let imagePicker = UIImagePickerController()
+    let imagePicker = MyImagePickerController()
     imagePicker.sourceType = .camera
     imagePicker.delegate = self
     imagePicker.allowsEditing = true
+    imagePicker.view.tintColor = view.tintColor
     present(imagePicker, animated: true, completion: nil)
   }
   
@@ -306,10 +307,11 @@ UINavigationControllerDelegate {
   }
   
   func choosePhotoFromLibray() {
-    let imagePicker = UIImagePickerController()
+    let imagePicker = MyImagePickerController()
     imagePicker.sourceType = .photoLibrary
     imagePicker.delegate = self
     imagePicker.allowsEditing = true
+    imagePicker.view.tintColor = view.tintColor
     present(imagePicker, animated: true, completion: nil)
   }
   
