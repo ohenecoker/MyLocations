@@ -252,6 +252,12 @@ class LocationDetailsViewController: UITableViewController {
     }
   }
   
+  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    let selection = UIView(frame: CGRect.zero)
+    selection.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
+    cell.selectedBackgroundView = selection
+  }
+  
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
     if indexPath.section == 0 || indexPath.section == 1 {
       return indexPath
