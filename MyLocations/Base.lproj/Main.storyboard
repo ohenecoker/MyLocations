@@ -90,7 +90,9 @@
                         <outlet property="addressLabel" destination="WTo-cP-KlX" id="CqO-xN-Ncp"/>
                         <outlet property="getButton" destination="Won-XV-JFz" id="c5g-Qz-npW"/>
                         <outlet property="latitudeLabel" destination="MRd-Hj-7GH" id="vVZ-ld-hp9"/>
+                        <outlet property="latitudeTextLabel" destination="Hdv-J7-UML" id="S67-vH-jjN"/>
                         <outlet property="longitudeLabel" destination="Ngz-Tx-Qwj" id="7rz-f2-8oM"/>
+                        <outlet property="longitudeTextLabel" destination="0P2-J7-vqY" id="kyI-YL-WAW"/>
                         <outlet property="messageLabel" destination="DPJ-1K-w14" id="QyJ-OD-jMD"/>
                         <outlet property="tagButton" destination="i9H-Ea-lo2" id="3CQ-I7-qME"/>
                     </connections>
