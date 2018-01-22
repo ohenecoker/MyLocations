@@ -10,6 +10,7 @@
 		B503EEAA2007FE3500D28157 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503EEA92007FE3500D28157 /* UIImage+Resize.swift */; };
 		B508301B200AB08E00397F91 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B508301A200AB08E00397F91 /* MyTabBarController.swift */; };
 		B5083021200AB2CF00397F91 /* MyImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5083020200AB2CF00397F91 /* MyImagePickerController.swift */; };
+		B52A277B2016482100C24DE8 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = B52A277A2016482000C24DE8 /* Sound.caf */; };
 		B54C1F0D200930A9006CD001 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54C1F0C200930A9006CD001 /* String+AddText.swift */; };
 		B5E076902003F3CB003CDA3E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E0768F2003F3CB003CDA3E /* MapViewController.swift */; };
 		DD05F7AD1F0A00950023C3EF /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD05F7AC1F0A00950023C3EF /* CategoryPickerViewController.swift */; };
@@ -25,13 +26,13 @@
 		DDE4055B1F05D4E200A024BE /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4055A1F05D4E200A024BE /* CurrentLocationViewController.swift */; };
 		DDE405601F05D4E200A024BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE4055E1F05D4E200A024BE /* Main.storyboard */; };
 		DDE405621F05D4E200A024BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE405611F05D4E200A024BE /* Assets.xcassets */; };
-		DDE405651F05D4E200A024BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE405631F05D4E200A024BE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B503EEA92007FE3500D28157 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		B508301A200AB08E00397F91 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		B5083020200AB2CF00397F91 /* MyImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImagePickerController.swift; sourceTree = "<group>"; };
+		B52A277A2016482000C24DE8 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
 		B54C1F0C200930A9006CD001 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 		B5E0768F2003F3CB003CDA3E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DD05F7AC1F0A00950023C3EF /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		DDE4055A1F05D4E200A024BE /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		DDE4055F1F05D4E200A024BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDE405611F05D4E200A024BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DDE405641F05D4E200A024BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDE405661F05D4E200A024BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B52A27792016482000C24DE8 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				B52A277A2016482000C24DE8 /* Sound.caf */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		DDE4054C1F05D4E200A024BE = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +96,7 @@
 		DDE405571F05D4E200A024BE /* MyLocations */ = {
 			isa = PBXGroup;
 			children = (
+				B52A27792016482000C24DE8 /* Sound */,
 				DDE405581F05D4E200A024BE /* AppDelegate.swift */,
 				DDE405611F05D4E200A024BE /* Assets.xcassets */,
 				DD05F7AC1F0A00950023C3EF /* CategoryPickerViewController.swift */,
@@ -97,7 +106,6 @@
 				DD69077D1F0B4CF00085DCC8 /* Functions.swift */,
 				DD69077B1F0B27E20085DCC8 /* HudView.swift */,
 				DDE405661F05D4E200A024BE /* Info.plist */,
-				DDE405631F05D4E200A024BE /* LaunchScreen.storyboard */,
 				DDBF614C1F09CCA3001BC2A7 /* LocationDetailsViewController.swift */,
 				DD0CEAD31F0DBD1D0047F6CD /* LocationsViewController.swift */,
 				DDE4055E1F05D4E200A024BE /* Main.storyboard */,
@@ -168,8 +176,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE405651F05D4E200A024BE /* LaunchScreen.storyboard in Resources */,
 				DDE405621F05D4E200A024BE /* Assets.xcassets in Resources */,
+				B52A277B2016482100C24DE8 /* Sound.caf in Resources */,
 				DDE405601F05D4E200A024BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,14 +217,6 @@
 				DDE4055F1F05D4E200A024BE /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DDE405631F05D4E200A024BE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDE405641F05D4E200A024BE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -333,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ER33CE5K6E;
@@ -350,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ER33CE5K6E;
